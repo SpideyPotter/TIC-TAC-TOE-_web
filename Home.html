@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Home</title>
+    <style>
+        @font-face {
+            font-family: 'samurai'; 
+            src: url('SamuraiBlast-8MnyD.otf') format('opentype');
+        }
+        * {
+            color: white;
+            font-family: "samurai";
+            transition: 0.2s ease-out;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #252a34;
+            text-align: center;
+            padding-top: 5vh;
+        }
+        .home-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #ff2e63;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1f4d;
+        }
+        button img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>Tic Tac Toe</h1>
+        <button id="twoPlayer">
+            <img src="pvp.png" alt="Two Player">
+            Two Player Game
+        </button>
+        <button id="vsComputer">
+            <img src="bot.png" alt="Play vs Computer">
+            Play vs Computer
+        </button>
+    </div>
+    <script>
+        document.getElementById('twoPlayer').addEventListener('click', function() {
+            window.location.href = 'game copy.html?mode=twoPlayer';
+        });
+
+        document.getElementById('vsComputer').addEventListener('click', function() {
+            window.location.href = 'game.html?mode=vsComputer';
+        });
+    </script>
+</body>
+</html>
